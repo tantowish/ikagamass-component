@@ -6,39 +6,57 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../dist/output.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        .zoom-in-out-text {
+            opacity: 0;
+            animation: zoom-in-zoom-out 1.5s ease-in-out 0.5s forwards;
+        }
+
+        @keyframes zoom-in-zoom-out {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
 </head>
 <body class="font-poppins">
-<!-- Hero Section -->
-<section class="h-screen relative overflow-hidden bg-gradient-to-l from-main via-secondary to-[#4FB685] mb-16">
-    <div class="bg-cover bg-center relative z-10 w-full" style="background-image: url('../asset/pattern.png'); height: 100%;">
-        <div class="absolute inset-0 z-0"></div>
+    <!-- Hero Section -->
+    <section class="h-screen relative overflow-hidden bg-gradient-to-l from-main via-secondary to-[#4FB685] mb-16">
+        <div class="bg-cover bg-center relative z-10 w-full" style="background-image: url('../asset/pattern.png'); height: 100%;">
+            <div class="absolute inset-0 z-0"></div>
 
-        <!-- Ampera Image -->
-        <div class="absolute z-20 left-0 bottom-0 max-w-[625px] h-auto">
-            <img src="../asset/ampera.png" alt="">
+            <!-- Ampera Image -->
+            <div data-aos-delay="300" data-aos="fade-up" data-aos-duration="2000" data-aos-once=“true” class="absolute z-20 left-0 bottom-0 max-w-xl h-auto">
+                <img src="../asset/ampera.png" alt="">
+            </div>
+
+        <!-- Mascots Container (Centered) -->
+        <div class="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-30 text-center w-full">
+            <!-- Mascots Image -->
+            <div data-aos="zoom-in" data-aos-duration="1500" data-aos-once=“true”>
+                <img src="../asset/mascots.png" alt="" class="max-h-72 mx-auto px-8 hover:scale-110 transition duration-500 ease-in-out">
+            </div>
+
+            <!-- Text -->
+            <div  class="zoom-in-out-text mt-4 max-w-lg mx-auto">
+                <h1 class="text-4xl md:text-6xl mx-auto font-bold text-white mb-2 leading-tight filter drop-shadow-2xl">Selamat Datang</h1>
+                <h1 class="text-4xl md:text-6xl mx-auto font-bold text-white mb-2 filter drop-shadow-2xl">di InTO UGM</h1>
+                <h1 class="text-4xl md:text-6xl mx-auto font-bold text-white mb-6 filter drop-shadow-2xl">2024</h1>
+                <a href="/tryouts">
+                    <button type="button" class="border-2 border-main bg-white rounded-full px-5 py-2 text-secondary font-semibold hover:bg-main hover:text-white transition duration-500 ease-in-out shadow-md hover:shadow-lg">Gabung Sekarang</button>
+                </a>
+            </div>
         </div>
-
-    <!-- Mascots Container (Centered) -->
-    <div class="absolute top-1/2 right-1/2 transform translate-x-1/2 -translate-y-1/2 z-30 text-center w-full">
-        <!-- Mascots Image -->
-        <img src="../asset/mascots.png" alt="" class="max-h-80 mx-auto px-8">
-
-        <!-- Text -->
-        <div class="mt-4">
-            <h1 class="text-4xl md:text-6xl max-w-lg mx-auto font-bold text-white mb-2 leading-tight">Selamat Datang</h1>
-            <h1 class="text-4xl md:text-6xl max-w-lg mx-auto font-bold text-white mb-2">di InTO UGM</h1>
-            <h1 class="text-4xl md:text-6xl max-w-lg mx-auto font-bold text-white mb-6 ">2024</h1>
-            <a href="/tour">
-                <button type="button" class="border-2 border-white text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Gabung Sekarang</button>
-            </a>
-        </div>
-    </div>
-
-    </div>
-</section>
-
-</section>
-
+    </section>
 
     
     <!-- Intro Section -->
@@ -51,7 +69,7 @@
                 <h1 class="text-xl font-bold mb-3 lg:text-2xl lg:mb-5">Ikagamass</h1>
                 <p class="text-justify md:px-8 lg:px-0  mb-6 lg:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
                 <a href="\categories">
-                    <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Selengkapnya</button>
+                    <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Selengkapnya</button>
                 </a>
             </div>
         </div>
@@ -63,7 +81,7 @@
                 <h1 class="text-xl font-bold mb-3 lg:text-2xl lg:mb-5">InTO UGM</h1>
                 <p class="text-justify md:px-8 lg:px-0  mb-6 lg:mb-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
                 <a href="#">
-                    <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Selengkapnya</button>
+                    <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Selengkapnya</button>
                 </a>
             </div>
         </div>
@@ -80,7 +98,7 @@
                         <p class="mb-12">Sosialisasi yang akan dilakukan oleh ikagamass selama periode pre-event</p>
                     </div>
                     <a href="/sosialisasi.html">
-                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Check</button>
+                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Check</button>
                     </a>
                 </div>
                 <div class="max-w-[300px] border-2 border-main mx-auto shadow-lg rounded-3xl p-12 text-center">
@@ -89,7 +107,7 @@
                         <p class="mb-12">Try Out yang akan dilakukan oleh ikagamass selama periode main event</p>
                     </div>
                     <a href="/tryout.html">
-                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Check</button>
+                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Check</button>
                     </a>
                 </div>
                 <div class="max-w-[300px] border-2 border-main mx-auto shadow-lg rounded-3xl p-12 text-center">
@@ -98,7 +116,7 @@
                         <p class="mb-12">Jelajahi fakultas yang ada pada kampus universitas gadjah mada secara online</p>
                     </div>
                     <a href="/tour">
-                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Check</button>
+                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Check</button>
                     </a>
                 </div>
             </div>
@@ -112,7 +130,7 @@
                 <h1 class="text-2xl font-bold mb-5">Paket Try Out</h1>
                 <p class="mb-5 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
                 <a href="/tryouts">
-                    <button type="button" class="border-2 border-main bg-white rounded-full px-5 py-2 text-secondary font-semibold hover:bg-main hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-lg">Selengkapnya</button>
+                    <button type="button" class="border-2 border-main bg-white rounded-full px-5 py-2 text-secondary font-semibold hover:bg-main hover:text-white transition duration-500 ease-in-out shadow-md hover:shadow-lg">Selengkapnya</button>
                 </a>
             </div>
             <div class="w-full lg:w-3/5 p-8 lg:py-16 flex flex-wrap justify-center gap-8">
@@ -277,16 +295,16 @@
         </div>
     </section>
 
-    <section class="p-16 bg-[#F5F8FE] mb-16">
+    <section class="p-8 lg:p-16 bg-[#F5F8FE] mb-16">
         <div class="max-w-6xl mx-auto lg:px-12 md:px-4">
             <h1 class="text-center text-2xl font-bold mb-12">Lokasi Main Event <span class="text-main">InTO UGM</span> 2024</h1>
             <div class="flex flex-wrap items-center">
-                <div class="w-full lg:w-4/12 lg:pr-16 order-2 lg:order-1">
+                <div class="w-full lg:w-4/12 lg:pr-16 order-2 lg:order-1 flex flex-wrap justify-center lg:justify-start">
                     <p class="mb-4 text-center lg:text-left">
                         ramdhan, Bakung jalan. Dr. Mohammad Hatta. jalan veteran no 1262 . Lg. Masjid, Kuto Batu, Kec. Ilir Tim. II, Sumarera, Sumatera Selatan 30114
                     </p>
                     <a href="https://maps.app.goo.gl/rDMMEVfDqJTFTBZB8" target="_blank">
-                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-300 w-fit ease-in-out">Cek Maps</button>
+                        <button type="button" class="bg-gradient-to-br from-main via-secondary to-[#4FB685] text-white rounded-full px-5 py-2 hover:scale-105 transition duration-500 w-fit ease-in-out">Cek Maps</button>
                     </a>
                 </div>
                 <div class="lg:w-8/12 w-full mb-8 lg:mb-0 order-1 lg:order-2">
@@ -298,7 +316,7 @@
 
     <!-- FAQs section -->
     <section class="p-8 lg:px-32 lg:py-0">
-        <div class="max-w-3xl mx-auto px-8">
+        <div class="max-w-3xl mx-auto lg:px-8">
             <h1 class="text-center text-2xl font-bold mb-10">Frequently Asked Questions</h1>
             <div class="mb-6">
                 <div class="flex flex-wrap mb-2">
@@ -340,6 +358,11 @@
     </section>
 
 
-    
+    <script>
+        AOS.init({
+        // ... your other initialisation options here ...
+        once: true,
+        });
+      </script>
 </body>
 </html>
